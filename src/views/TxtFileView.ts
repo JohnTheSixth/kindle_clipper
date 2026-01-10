@@ -88,7 +88,7 @@ export class TxtFileView extends TextFileView {
         await this.appRef.vault.create(filePath, markdown);
         filesCreated++;
       } catch (e) {
-        new Notice(`Failed to create file for "${title}": ${e}`);
+        new Notice(`Failed to create file for "${title}": ${e instanceof Error ? e.message : String(e)}`);
       }
     }
 

@@ -182,7 +182,7 @@ export class ClippingsConverter {
           clippings.push(clipping);
         }
       } catch (e) {
-        errors.push(`Failed to parse clipping block ${i + 1}: ${e}`);
+        errors.push(`Failed to parse clipping block ${i + 1}: ${e instanceof Error ? e.message : String(e)}`);
       }
     }
 
