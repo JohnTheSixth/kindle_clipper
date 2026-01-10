@@ -1,10 +1,10 @@
 {
-	"id": "kindle-clipper",
-	"name": "Kindle Clipper",
-	"version": "0.1.0",
-	"minAppVersion": "0.15.0",
-	"description": "View and process Kindle clippings and text files natively in Obsidian.",
-	"author": "",
-	"authorUrl": "",
-	"isDesktopOnly": false
+  "id": "kindle-clipper",
+  "name": "Kindle Clipper",
+  "version": "0.1.0",
+  "minAppVersion": "0.15.0",
+  "description": "View and process Kindle clippings and text files natively in Obsidian.",
+  "author": "",
+  "authorUrl": "",
+  "isDesktopOnly": false
 }
