@@ -1,15 +1,15 @@
 import {App, PluginSettingTab, Setting} from "obsidian";
 import KindleClipperPlugin from "./main";
 
-export interface MyPluginSettings {
+export interface KindleClipperPluginSettings {
   mySetting: string;
 }
 
-export const DEFAULT_SETTINGS: MyPluginSettings = {
+export const DEFAULT_SETTINGS: KindleClipperPluginSettings = {
   mySetting: 'default'
 }
 
-export class SampleSettingTab extends PluginSettingTab {
+export class KindleClipperSettingTab extends PluginSettingTab {
   plugin: KindleClipperPlugin;
 
   constructor(app: App, plugin: KindleClipperPlugin) {
