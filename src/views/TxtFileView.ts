@@ -1,5 +1,5 @@
-import { TextFileView, WorkspaceLeaf } from "obsidian";
-import { TXT_VIEW_TYPE } from "../constants";
+import { TextFileView, WorkspaceLeaf } from 'obsidian';
+import { TXT_VIEW_TYPE } from '../constants';
 
 export class TxtFileView extends TextFileView {
   constructor(leaf: WorkspaceLeaf) {
@@ -11,7 +11,7 @@ export class TxtFileView extends TextFileView {
   }
 
   getDisplayText(): string {
-    return this.file?.basename ?? "Text file";
+    return this.file?.basename ?? 'Text file';
   }
 
   setViewData(data: string, clear: boolean): void {
@@ -19,8 +19,8 @@ export class TxtFileView extends TextFileView {
     if (clear) {
       this.clear();
     }
-    const preEl = this.contentEl.createEl("pre", {
-      cls: "txt-file-view-content",
+    const preEl = this.contentEl.createEl('pre', {
+      cls: 'txt-file-view-content',
     });
     preEl.textContent = data;
   }

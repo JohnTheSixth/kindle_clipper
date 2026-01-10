@@ -20,6 +20,9 @@ export default tseslint.config(
         extraFileExtensions: ['.json']
       },
     },
+    rules: {
+      'padded-blocks': ['error', 'never'],
+    },
   },
   ...obsidianmd.configs.recommended,
   globalIgnores([

@@ -1,11 +1,7 @@
-import { Plugin } from "obsidian";
-import {
-  DEFAULT_SETTINGS,
-  KindleClipperSettings,
-  KindleClipperSettingTab,
-} from "./settings";
-import { TxtFileView } from "./views/TxtFileView";
-import { TXT_VIEW_TYPE } from "./constants";
+import { Plugin } from 'obsidian';
+import { DEFAULT_SETTINGS, KindleClipperSettings, KindleClipperSettingTab } from './settings';
+import { TxtFileView } from './views/TxtFileView';
+import { TXT_VIEW_TYPE } from './constants';
 
 export default class KindleClipperPlugin extends Plugin {
   settings: KindleClipperSettings;
@@ -15,7 +11,7 @@ export default class KindleClipperPlugin extends Plugin {
 
     this.registerView(TXT_VIEW_TYPE, (leaf) => new TxtFileView(leaf));
 
-    this.registerExtensions(["txt"], TXT_VIEW_TYPE);
+    this.registerExtensions(['txt'], TXT_VIEW_TYPE);
 
     this.addSettingTab(new KindleClipperSettingTab(this.app, this));
   }
@@ -23,11 +19,7 @@ export default class KindleClipperPlugin extends Plugin {
   onunload() {}
 
   async loadSettings() {
-    this.settings = Object.assign(
-      {},
-      DEFAULT_SETTINGS,
-      (await this.loadData()) as Partial<KindleClipperSettings>
-    );
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, (await this.loadData()) as Partial<KindleClipperSettings>);
   }
 
   async saveSettings() {
