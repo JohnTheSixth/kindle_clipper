@@ -1,13 +1,12 @@
-import {App, PluginSettingTab, Setting} from "obsidian";
+import { App, PluginSettingTab } from "obsidian";
 import KindleClipperPlugin from "./main";
 
-export interface KindleClipperPluginSettings {
-  mySetting: string;
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
+export interface KindleClipperSettings {
+  // Future settings can be added here
 }
 
-export const DEFAULT_SETTINGS: KindleClipperPluginSettings = {
-  mySetting: 'default'
-}
+export const DEFAULT_SETTINGS: KindleClipperSettings = {};
 
 export class KindleClipperSettingTab extends PluginSettingTab {
   plugin: KindleClipperPlugin;
@@ -18,19 +17,12 @@ export class KindleClipperSettingTab extends PluginSettingTab {
   }
 
   display(): void {
-    const {containerEl} = this;
+    const { containerEl } = this;
 
     containerEl.empty();
 
-    new Setting(containerEl)
-      .setName('Settings #1')
-      .setDesc('It\'s a secret')
-      .addText(text => text
-        .setPlaceholder('Enter your secret')
-        .setValue(this.plugin.settings.mySetting)
-        .onChange(async (value) => {
-          this.plugin.settings.mySetting = value;
-          await this.plugin.saveSettings();
-        }));
+    containerEl.createEl("p", {
+      text: "No configuration options available yet.",
+    });
   }
 }
