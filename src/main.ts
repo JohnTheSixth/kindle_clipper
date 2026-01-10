@@ -3,7 +3,7 @@ import {DEFAULT_SETTINGS, MyPluginSettings, SampleSettingTab} from "./settings";
 
 // Remember to rename these classes and interfaces!
 
-export default class MyPlugin extends Plugin {
+export default class KindleClipperPlugin extends Plugin {
 	settings: MyPluginSettings;
 
 	async onload() {
@@ -24,7 +24,7 @@ export default class MyPlugin extends Plugin {
 			id: 'open-modal-simple',
 			name: 'Open modal (simple)',
 			callback: () => {
-				new SampleModal(this.app).open();
+				new KindleClipperModal(this.app).open();
 			}
 		});
 		// This adds an editor command that can perform some operation on the current editor instance
@@ -46,7 +46,7 @@ export default class MyPlugin extends Plugin {
 					// If checking is true, we're simply "checking" if the command can be run.
 					// If checking is false, then we want to actually perform the operation.
 					if (!checking) {
-						new SampleModal(this.app).open();
+						new KindleClipperModal(this.app).open();
 					}
 
 					// This command will only show up in Command Palette when the check function returns true
@@ -82,7 +82,7 @@ export default class MyPlugin extends Plugin {
 	}
 }
 
-class SampleModal extends Modal {
+class KindleClipperModal extends Modal {
 	constructor(app: App) {
 		super(app);
 	}
