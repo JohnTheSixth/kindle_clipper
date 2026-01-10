@@ -1,6 +1,7 @@
-import { App, PluginSettingTab } from "obsidian";
+import { App, PluginSettingTab, Setting } from "obsidian";
 import KindleClipperPlugin from "./main";
 
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface KindleClipperSettings {
   // Future settings can be added here
 }
@@ -20,7 +21,7 @@ export class KindleClipperSettingTab extends PluginSettingTab {
 
     containerEl.empty();
 
-    containerEl.createEl("h2", { text: "Kindle Clipper settings" });
+    new Setting(containerEl).setName("Kindle clipper").setHeading();
     containerEl.createEl("p", {
       text: "No configuration options available yet.",
     });
