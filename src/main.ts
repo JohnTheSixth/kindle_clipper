@@ -9,7 +9,7 @@ export default class KindleClipperPlugin extends Plugin {
   async onload() {
     await this.loadSettings();
 
-    this.registerView(TXT_VIEW_TYPE, (leaf) => new TxtFileView(leaf));
+    this.registerView(TXT_VIEW_TYPE, (leaf) => new TxtFileView(leaf, this.app));
 
     this.registerExtensions(['txt'], TXT_VIEW_TYPE);
 
