@@ -56,7 +56,9 @@ src/
 
 ## Contributing
 
-Issues and PRs welcome. For feature requests, please open an issue first to discuss.
+Special thanks to [kkincade](http://github.com/kkincade) for his work on [kindle-clippings-to-markdown](https://github.com/kkincade/kindle-clippings-to-markdown), which was the inspiration for this library.
+
+Additional issues and PRs welcome. For feature requests, please open an issue first to discuss.
 
 ## License
 
